@@ -15,8 +15,8 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
 => Microsoft SQL Server melalui SQLSRVdriver (hanya versi 2005 dan lebih tinggi) <br>
 => Oracle Database melalui OCI8driver (hanya versi 12.1 dan lebih tinggi) <br>
 
-##*1. Installation* <br>
-    *a. Composer Installation* <br>
+## 1. Installation <br>
+    ### - Composer Installation <br>
       Teknik pertama buka cmder pada web server, lalu ketikan seperti dibawah <br>
       ```
       $ composer create-project codeigniter4/appstarter project-root``` <br>
@@ -31,6 +31,7 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
       ```
       $ cd ci4app``` <br>
       ```
-      $ php spark serve <br>
-      ```
+      $ php spark serve 
+      ``` <br>
+      
       
