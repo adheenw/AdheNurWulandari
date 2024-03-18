@@ -16,7 +16,7 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
 => Oracle Database melalui OCI8driver (hanya versi 12.1 dan lebih tinggi) <br>
 
 ## 1. Installation <br>
-    ### - Composer Installation <br>
+   ** Composer Installation **<br>
       Teknik pertama buka cmder pada web server, lalu ketikan seperti dibawah <br>
       ```
       $ composer create-project codeigniter4/appstarter project-root``` <br>
