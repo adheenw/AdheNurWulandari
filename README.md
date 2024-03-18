@@ -550,6 +550,9 @@ Properti baru ini sekarang berisi kolom yang kami izinkan untuk disimpan ke data
   http://localhost:8080/news/new <br>
   ![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/31049c8c-31ff-4a79-b750-a8de089f8fb7)
 <br>
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/33e2148f-58da-4707-80e7-ec3b9eaa80ef)
+<br>
+Data berita baru berhasil ditambahkan <br>
 
 
 
