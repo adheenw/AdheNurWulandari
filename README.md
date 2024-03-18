@@ -39,7 +39,8 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
     CodeIgniter 4 hadir dengan server pengembangan lokal, memanfaatkan server web bawaan PHP dengan routing CodeIgniter. Anda dapat meluncurkannya, 
     dengan baris perintah berikut di direktori utama: <br>
 ```
-php spark serve ```
+php spark serve ``` <br>
+
 Ini akan meluncurkan server dan sekarang Anda dapat melihat aplikasi Anda di browser Anda di http://localhost:8080 .
       
       
