@@ -377,6 +377,74 @@ Satu-satunya hal yang perlu dilakukan adalah membuat tampilan terkait di app/Vie
 <p><?= esc($news['body']) ?></p>
 ```
 Arahkan browser Anda ke halaman “berita”, yaitu localhost:8080/news , Anda akan melihat daftar item berita, yang masing-masing memiliki link untuk menampilkan satu artikel saja. <br>
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/3dbec9f5-aeb4-46d6-b5e7-1a0518dae92e)
+<br>
+**buat item berita**
+Anda sekarang tahu bagaimana Anda bisa membaca data dari database menggunakan CodeIgniter, tapi Anda belum menulis informasi apa pun ke database. Di bagian ini, Anda akan memperluas pengontrol berita dan model yang dibuat sebelumnya untuk menyertakan fungsi ini. 
+- aktifkan filter CSRF
+Buka file app/Config/Filters.php dan perbarui $methodsproperti seperti berikut:
+```
+<?php
+
+namespace Config;
+
+use CodeIgniter\Config\BaseConfig;
+
+class Filters extends BaseConfig
+{
+    // ...
+
+    public $methods = [
+        'post' => ['csrf'],
+    ];
+
+    // ...
+}
+```
+Ini mengkonfigurasi filter CSRF untuk diaktifkan untuk semua permintaan POST. <br>
+- menambahkan aturan perutean
+  menambahkan aturan tambahan ke file app/Config/Routes.php . Pastikan file Anda berisi yang berikut ini: <br>
+```
+<?php
+
+// ...
+
+use App\Controllers\News;
+use App\Controllers\Pages;
+
+$routes->get('news', [News::class, 'index']);
+$routes->get('news/new', [News::class, 'new']); // Add this line
+$routes->post('news', [News::class, 'create']); // Add this line
+$routes->get('news/(:segment)', [News::class, 'show']);
+
+$routes->get('pages', [Pages::class, 'index']);
+$routes->get('(:segment)', [Pages::class, 'view']);
+```
+Petunjuk rute untuk 'news/new'ditempatkan sebelum petunjuk untuk untuk 'news/(:segment)'memastikan bahwa formulir untuk membuat item berita ditampilkan. <br>
+Baris ini $routes->post()mendefinisikan router untuk permintaan POST. Ini hanya cocok dengan permintaan POST ke jalur URI /news , dan dipetakan ke create()metode kelas News. <br>
+- buat berita
+untuk memasukan data baru ke dalam database, perlu membuat formulir dimana Anda dapat memasukkan informasi yang akan disimpan. <br>
+Buat tampilan baru di app/Views/news/create.php : <br>
+```
+<h2><?= esc($title) ?></h2>
+
+<?= session()->getFlashdata('error') ?>
+<?= validation_list_errors() ?>
+
+<form action="/news" method="post">
+    <?= csrf_field() ?>
+
+    <label for="title">Title</label>
+    <input type="input" name="title" value="<?= set_value('title') ?>">
+    <br>
+
+    <label for="body">Text</label>
+    <textarea name="body" cols="45" rows="4"><?= set_value('body') ?></textarea>
+    <br>
+
+    <input type="submit" name="submit" value="Create news item">
+</form>
+```
 
 
   
