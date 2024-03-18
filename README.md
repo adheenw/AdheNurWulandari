@@ -30,6 +30,7 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
       atau punya saya
       ```shell
       $ cd ci4app```
+      ```shell
       $ php spark serve
       ```
       
