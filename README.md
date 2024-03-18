@@ -166,7 +166,8 @@ Instalasi CodeIgniter mengasumsikan bahwa Anda telah menyiapkan database yang se
 <br>
 Anda perlu membuat database ci4tutorialyang dapat digunakan untuk tutorial ini, dan kemudian mengkonfigurasi CodeIgniter untuk menggunakannya. <br>
 <br>
-Menggunakan klien database Anda, sambungkan ke database Anda dan jalankan perintah SQL di bawah ini (MySQL): <br>
+Menggunakan klien database Anda, sambungkan ke database Anda dan jalankan perintah SQL di bawah ini (MySQL):   <br>
+
 ```
 CREATE TABLE news (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -177,5 +178,5 @@ CREATE TABLE news (
     UNIQUE slug (slug)
 );
 ```
-pada projek : <br>
+pada projek :  <br>
 
