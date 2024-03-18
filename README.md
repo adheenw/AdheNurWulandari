@@ -189,6 +189,19 @@ INSERT INTO news VALUES
 (2,'Say it isn\'t so!','say-it-isnt-so','Scientists conclude that some programmers have a sense of humor.');
 ```
 pada projek saya : <br>
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/99e07a7f-8654-4f8b-a1bc-c130b96c9541)
+<br>
+- hubungkan ke basis data anda <br>
+File konfigurasi lokal, .env , yang Anda buat saat menginstal CodeIgniter, harus memiliki pengaturan properti database yang tidak diberi komentar dan disetel dengan tepat untuk database yang ingin Anda gunakan. Pastikan Anda telah mengkonfigurasi database Anda dengan benar seperti yang dijelaskan dalam Konfigurasi Database : <br>
+
+```
+database.default.hostname = localhost
+database.default.database = ci4tutorial
+database.default.username = root
+database.default.password = root
+database.default.DBDriver = MySQLi
+```
+pada perojek file env.: <br>
 
 
 
