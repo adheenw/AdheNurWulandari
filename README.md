@@ -164,7 +164,7 @@ Sekarang kunjungi localhost:8080/home . <br>
 - buat database untuk digunakan <br>
 Instalasi CodeIgniter mengasumsikan bahwa Anda telah menyiapkan database yang sesuai, sebagaimana diuraikan dalam persyaratan . Dalam tutorial ini, kami menyediakan kode SQL untuk database MySQL, dan kami juga berasumsi bahwa Anda memiliki klien yang cocok untuk mengeluarkan perintah database (mysql, MySQL Workbench, atau phpMyAdmin). <br>
 <br>
-Anda perlu membuat database ci4tutorialyang dapat digunakan untuk tutorial ini, dan kemudian mengkonfigurasi CodeIgniter untuk menggunakannya. <br>
+Anda perlu membuat database ci4tutorial yang dapat digunakan untuk tutorial ini, dan kemudian mengkonfigurasi CodeIgniter untuk menggunakannya. <br>
 <br>
 Menggunakan klien database Anda, sambungkan ke database Anda dan jalankan perintah SQL di bawah ini (MySQL):   <br>
 
@@ -179,4 +179,16 @@ CREATE TABLE news (
 );
 ```
 pada projek :  <br>
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/130f750d-02a7-4011-9914-5f9d743e999c)
+<br>
+kemudian isi kan bagian table news pada database ci4tutorial <br>
+
+```
+INSERT INTO news VALUES
+(1,'Elvis sighted','elvis-sighted','Elvis was sighted at the Podunk internet cafe. It looked like he was writing a CodeIgniter app.'),
+(2,'Say it isn\'t so!','say-it-isnt-so','Scientists conclude that some programmers have a sense of humor.');
+```
+pada projek saya : <br>
+
+
 
