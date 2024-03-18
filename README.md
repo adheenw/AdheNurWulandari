@@ -202,6 +202,23 @@ database.default.password = root
 database.default.DBDriver = MySQLi
 ```
 pada perojek file env.: <br>
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/0c7894c1-9cc8-4fbf-a0a7-6b0b6caa1fc8)
+<br>
+- buat model berita
+Buka direktori app/Models dan buat file baru bernama NewsModel.php dan tambahkan kode berikut : <br>
+```
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class NewsModel extends Model
+{
+    protected $table = 'news';
+}
+```
+
 
 
 
