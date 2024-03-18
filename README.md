@@ -38,8 +38,22 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
       Server Pengembangan Lokal
     CodeIgniter 4 hadir dengan server pengembangan lokal, memanfaatkan server web bawaan PHP dengan routing CodeIgniter. Anda dapat meluncurkannya, 
     dengan baris perintah berikut di direktori utama: <br>
-```php spark serve ```
+```php spark serve ``` <br>
 Ini akan meluncurkan server dan sekarang Anda dapat melihat aplikasi Anda di browser Anda di http://localhost:8080 . <br>
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/4090b6b1-d24f-4c9c-ade7-0009c871231a)  <br>
+## 2. Bangun Aplikasi Pertama <br>
+Tutorial ini dimaksudkan untuk memperkenalkan Anda pada framework CodeIgniter4 dan prinsip dasar arsitektur MVC. Ini akan menunjukkan kepada Anda bagaimana aplikasi dasar CodeIgniter dibangun secara langkah demi langkah.Jika Anda belum familiar dengan PHP, kami sarankan Anda membaca Tutorial PHP W3Schools sebelum melanjutkan.
+Dalam tutorial ini, Anda akan membuat aplikasi berita dasar . Anda akan mulai dengan menulis kode yang dapat memuat halaman statis. Selanjutnya, Anda akan membuat bagian berita yang membaca item berita dari database. Terakhir, Anda akan menambahkan formulir untuk membuat item berita di database. <br>
+Tutorial ini terutama akan fokus pada: <br>
+- Dasar-dasar Model-View-Controller <br>
+- Dasar-dasar perutean <br>
+- Validasi formulir <br>
+- Melakukan query database dasar menggunakan Model CodeIgniter <br>
+**Halaman Statis**
+  Buka file rute yang terletak di app/Config/Routes.php . Satu-satunya petunjuk rute untuk memulai adalah: <br>
+  
+
+
 
 
       
