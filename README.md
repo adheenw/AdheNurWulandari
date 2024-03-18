@@ -100,6 +100,9 @@ Buat header di app/Views/templates/header.php dan tambahkan kode berikut: <br>
 
     <h1><?= esc($title) ?></h1>
 ```
+pada projek : <br>
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/56982c9e-007e-4406-83e2-d66e694a19bc)
+<br>
 Sekarang, buat footer di app/Views/templates/footer.php yang menyertakan kode berikut: <br>
 ```
 <em>&copy; 2022</em>
@@ -149,3 +152,11 @@ class Pages extends BaseController
     }
 }
 ```
+- menjalankan aplikasi <br>
+Dari baris perintah, di root proyek Anda: <br>
+```
+php spark serve
+```
+akan memulai server web, dapat diakses pada port 8080. Jika Anda mengatur field lokasi di browser Anda ke localhost:8080 , Anda akan melihat halaman selamat datang CodeIgniter. <br>
+Sekarang kunjungi localhost:8080/home . <br>
+
