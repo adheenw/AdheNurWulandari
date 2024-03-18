@@ -218,6 +218,96 @@ class NewsModel extends Model
     protected $table = 'news';
 }
 ```
+- tambahkan metode NewsModel::getNew() <br>
+Tambahkan kode berikut ke model : <br>
+
+```
+ public function getNews($slug = false)
+    {
+        if ($slug === false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['slug' => $slug])->first();
+    }
+```
+
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/72bab21d-d3ff-42f5-8b82-0e7548a01ecc)
+<br>
+- tampilkan berita
+Sekarang setelah kueri ditulis, model harus dikaitkan dengan tampilan yang akan menampilkan item berita kepada pengguna. Ini bisa dilakukan di Pagespengontrol yang kami buat sebelumnya, tetapi demi kejelasan, Newspengontrol baru telah ditentukan. <br>
+Ubah file app/Config/Routes.php Anda , sehingga terlihat seperti berikut: <br>
+```
+<?php
+
+// ...
+
+use App\Controllers\News; // Add this line
+use App\Controllers\Pages;
+
+$routes->get('news', [News::class, 'index']);           // Add this line
+$routes->get('news/(:segment)', [News::class, 'show']); // Add this line
+
+$routes->get('pages', [Pages::class, 'index']);
+$routes->get('(:segment)', [Pages::class, 'view']);
+```
+- buat perngontrol berita <br>
+Buat pengontrol baru di app/Controllers/News.php <br>
+```
+<?php
+
+namespace App\Controllers;
+
+use App\Models\NewsModel;
+
+class News extends BaseController
+{
+    public function index()
+    {
+        $model = model(NewsModel::class);
+
+        $data['news'] = $model->getNews();
+    }
+
+    public function show($slug = null)
+    {
+        $model = model(NewsModel::class);
+
+        $data['news'] = $model->getNews($slug);
+    }
+}
+```
+kemudian pada app/Controllers/News.php, pada perintah index () diisikan kode berikut :
+
+```
+<?php
+
+namespace App\Controllers;
+
+use App\Models\NewsModel;
+
+class News extends BaseController
+{
+    public function index()
+    {
+        $model = model(NewsModel::class);
+
+        $data = [
+            'news'  => $model->getNews(),
+            'title' => 'News archive',
+        ];
+
+        return view('templates/header', $data)
+            . view('news/index')
+            . view('templates/footer');
+    }
+
+    // ...
+}
+```
+
+
+
 
 
 
