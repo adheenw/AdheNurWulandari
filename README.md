@@ -333,6 +333,43 @@ Buat app/Views/news/index.php dan tambahkan potongan kode berikutnya. <br>
 
 <?php endif ?>
 ```
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/f9e908ef-9d52-48d7-aff5-27252400a634)
+<br>
+- berita lengkap::show() metode <br>
+Halaman ikhtisar berita kini sudah selesai, namun halaman untuk menampilkan item berita individual masih belum ada. Model yang dibuat sebelumnya dibuat sedemikian rupa sehingga dapat dengan mudah digunakan untuk fungsi ini. Anda hanya perlu menambahkan beberapa kode ke controller dan membuat tampilan baru. <br>
+Kembali ke app/controllers/news.php dan perbarui show()metode dengan yang berikut:
+```
+<?php
+
+namespace App\Controllers;
+
+use App\Models\NewsModel;
+use CodeIgniter\Exceptions\PageNotFoundException;
+
+class News extends BaseController
+{
+    // ...
+
+    public function show($slug = null)
+    {
+        $model = model(NewsModel::class);
+
+        $data['news'] = $model->getNews($slug);
+
+        if (empty($data['news'])) {
+            throw new PageNotFoundException('Cannot find the news item: ' . $slug);
+        }
+
+        $data['title'] = $data['news']['title'];
+
+        return view('templates/header', $data)
+            . view('news/view')
+            . view('templates/footer');
+    }
+}
+```
+
+  
 
 
 
