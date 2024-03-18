@@ -51,10 +51,61 @@ Tutorial ini terutama akan fokus pada: <br>
 - Melakukan query database dasar menggunakan Model CodeIgniter <br>
 **Halaman Statis**
   Buka file rute yang terletak di app/Config/Routes.php . Satu-satunya petunjuk rute untuk memulai adalah: <br>
-  
+```
+<?php
 
+use CodeIgniter\Router\RouteCollection;
 
+/**
+ * @var RouteCollection $routes
+ */
+$routes->get('/', 'Home::index');
+```
+Tambahkan baris berikut, setelah arahan rute untuk '/'. <br>
+```
+use App\Controllers\Pages;
 
+$routes->get('pages', [Pages::class, 'index']);
+$routes->get('(:segment)', [Pages::class, 'view']);
+```
+- Buat pengontrol halaman <br>
+buat file di app/Controllers/Pages.php dengan kode berikut : <br>
+```
+<?php
 
-      
+namespace App\Controllers;
+
+class Pages extends BaseController
+{
+    public function index()
+    {
+        return view('welcome_message');
+    }
+
+    public function view($page = 'home')
+    {
+        // ...
+    }
+}
+```
+- buat tampilan <br>
+Buat header di app/Views/templates/header.php dan tambahkan kode berikut: <br>
+```
+<!doctype html>
+<html>
+<head>
+    <title>CodeIgniter Tutorial</title>
+</head>
+<body>
+
+    <h1><?= esc($title) ?></h1>
+```
+Sekarang, buat footer di app/Views/templates/footer.php yang menyertakan kode berikut: <br>
+```
+<em>&copy; 2022</em>
+</body>
+</html>
+```
+pada projek :
+
       
