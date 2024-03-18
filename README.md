@@ -548,7 +548,9 @@ Properti baru ini sekarang berisi kolom yang kami izinkan untuk disimpan ke data
 - buat item berita <br>
   Sekarang arahkan browser Anda ke lingkungan pengembangan lokal tempat Anda menginstal CodeIgniter dan tambahkan /news/new ke URL. Tambahkan beberapa berita dan periksa halaman berbeda yang Anda buat. <br>
   http://localhost:8080/news/new <br>
-  
+  ![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/31049c8c-31ff-4a79-b750-a8de089f8fb7)
+<br>
+
 
 
   
