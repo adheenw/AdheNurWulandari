@@ -1,7 +1,7 @@
-# Pemrograman Berbasis Framework
-Nama : Adhe Nur Wulandari
-Kelas : TI - 2D
-NIM : 220302073
+# Pemrograman Berbasis Framework <br>
+Nama : Adhe Nur Wulandari <br>
+Kelas : TI - 2D <br>
+NIM : 220302073 <br>
 
 ## Codeigniter4 <br>
 CodeIgniter adalah Kerangka Pengembangan Aplikasi - sebuah toolkit - untuk orang-orang yang membangun situs web menggunakan PHP.
@@ -38,9 +38,9 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
       Server Pengembangan Lokal
     CodeIgniter 4 hadir dengan server pengembangan lokal, memanfaatkan server web bawaan PHP dengan routing CodeIgniter. Anda dapat meluncurkannya, 
     dengan baris perintah berikut di direktori utama: <br>
-```
-$php spark serve ```
+```php spark serve ```
+Ini akan meluncurkan server dan sekarang Anda dapat melihat aplikasi Anda di browser Anda di http://localhost:8080 . <br>
 
-Ini akan meluncurkan server dan sekarang Anda dapat melihat aplikasi Anda di browser Anda di http://localhost:8080 .
+
       
       
