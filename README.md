@@ -25,4 +25,11 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
       ```shell
       $ composer create-project codeigniter4/appstarter ci4app```
       kemudian jalankan server
+      ```shell
+      $ cd nama-root```
+      atau punya saya
+      ```shell
+      $ cd ci4app```
+      $ php spark serve
+      ```
       
