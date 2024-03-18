@@ -368,6 +368,16 @@ class News extends BaseController
     }
 }
 ```
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/fe15142e-45af-4cd6-b00a-b50d63ec541e)
+<br>
+- buatberita/lihat liha file <br>
+Satu-satunya hal yang perlu dilakukan adalah membuat tampilan terkait di app/Views/news/view.php. Letakkan kode berikut di file ini. <br>
+```
+<h2><?= esc($news['title']) ?></h2>
+<p><?= esc($news['body']) ?></p>
+```
+Arahkan browser Anda ke halaman “berita”, yaitu localhost:8080/news , Anda akan melihat daftar item berita, yang masing-masing memiliki link untuk menampilkan satu artikel saja. <br>
+
 
   
 
