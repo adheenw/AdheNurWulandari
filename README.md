@@ -522,6 +522,33 @@ class News extends BaseController
     }
 }
 ```
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/0ce2b591-6582-4aed-94a9-a052e517b5b2)
+<br>
+kemudian buat file success pada direktori app/Views/news/success.php <br>
+```
+<p>News item created successfully.</p>
+```
+- pembaruan model berita <br>
+ Edit NewsModeluntuk memberikannya daftar bidang yang dapat diperbarui di $allowedFieldsproperti. <br>
+ ```
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class NewsModel extends Model
+{
+    protected $table = 'news';
+
+    protected $allowedFields = ['title', 'slug', 'body'];
+}
+```
+Properti baru ini sekarang berisi kolom yang kami izinkan untuk disimpan ke database. <br>
+- buat item berita <br>
+  Sekarang arahkan browser Anda ke lingkungan pengembangan lokal tempat Anda menginstal CodeIgniter dan tambahkan /news/new ke URL. Tambahkan beberapa berita dan periksa halaman berbeda yang Anda buat. <br>
+  http://localhost:8080/news/new <br>
+  
 
 
   
