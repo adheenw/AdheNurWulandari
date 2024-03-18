@@ -552,7 +552,11 @@ Properti baru ini sekarang berisi kolom yang kami izinkan untuk disimpan ke data
 <br>
 data berhasil ditambahkan <br>
 
+  ![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/714011af-3c5a-495e-91b7-15f1bf7a74ff)
 <br>
+tampilan http://localhost:8080/news dengan data yang berhasil di tambahkan. <br>
+
+
 
 
 
