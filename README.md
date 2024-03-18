@@ -33,6 +33,7 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
       ```
       $ php spark serve 
       ``` <br>
+      ![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/c26c3143-d774-4769-a95e-20dda8dcf034)
       **Instalasi Manual**
       
       
