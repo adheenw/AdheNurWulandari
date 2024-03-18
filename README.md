@@ -3,7 +3,7 @@ Nama : Adhe Nur Wulandari <br>
 Kelas : TI - 2D <br>
 NIM : 220302073 <br>
 
-## Codeigniter4 <br>
+## 1. Codeigniter4 <br>
 CodeIgniter adalah Kerangka Pengembangan Aplikasi - sebuah toolkit - untuk orang-orang yang membangun situs web menggunakan PHP.
 Tujuannya adalah untuk memungkinkan Anda mengembangkan proyek jauh lebih cepat daripada jika Anda menulis kode dari awal, dengan menyediakan kumpulan perpustakaan yang kaya untuk tugas-tugas umum,
 serta antarmuka sederhana dan struktur logis untuk mengakses perpustakaan ini.
@@ -15,7 +15,7 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
 => Microsoft SQL Server melalui SQLSRVdriver (hanya versi 2005 dan lebih tinggi) <br>
 => Oracle Database melalui OCI8driver (hanya versi 12.1 dan lebih tinggi) <br>
 
-## 1. Installation <br>
+## 2. Installation <br>
    **Composer Installation** <br>
       Teknik pertama buka cmder pada web server, lalu ketikan seperti dibawah <br>
       ```
@@ -41,7 +41,7 @@ CodeIgniter memungkinkan Anda fokus secara kreatif pada proyek Anda dengan memin
 ```php spark serve ``` <br>
 Ini akan meluncurkan server dan sekarang Anda dapat melihat aplikasi Anda di browser Anda di http://localhost:8080 . <br>
 ![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/4090b6b1-d24f-4c9c-ade7-0009c871231a)  <br>
-## 2. Bangun Aplikasi Pertama <br>
+## 3. Bangun Aplikasi Pertama <br>
 Tutorial ini dimaksudkan untuk memperkenalkan Anda pada framework CodeIgniter4 dan prinsip dasar arsitektur MVC. Ini akan menunjukkan kepada Anda bagaimana aplikasi dasar CodeIgniter dibangun secara langkah demi langkah.Jika Anda belum familiar dengan PHP, kami sarankan Anda membaca Tutorial PHP W3Schools sebelum melanjutkan.
 Dalam tutorial ini, Anda akan membuat aplikasi berita dasar . Anda akan mulai dengan menulis kode yang dapat memuat halaman statis. Selanjutnya, Anda akan membuat bagian berita yang membaca item berita dari database. Terakhir, Anda akan menambahkan formulir untuk membuat item berita di database. <br>
 Tutorial ini terutama akan fokus pada: <br>
@@ -49,7 +49,7 @@ Tutorial ini terutama akan fokus pada: <br>
 - Dasar-dasar perutean <br>
 - Validasi formulir <br>
 - Melakukan query database dasar menggunakan Model CodeIgniter <br>
-**Halaman Statis**
+**HALAMAN STATIS**
   Buka file rute yang terletak di app/Config/Routes.php . Satu-satunya petunjuk rute untuk memulai adalah: <br>
 ```
 <?php
@@ -160,7 +160,7 @@ php spark serve
 akan memulai server web, dapat diakses pada port 8080. Jika Anda mengatur field lokasi di browser Anda ke localhost:8080 , Anda akan melihat halaman selamat datang CodeIgniter. <br>
 Sekarang kunjungi localhost:8080/home . <br>
 ![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/054377a4-0a86-4cf3-befd-2f33bf77c7df)
-**bagian berita**
+**BAGIAN BERITA**
 - buat database untuk digunakan <br>
 Instalasi CodeIgniter mengasumsikan bahwa Anda telah menyiapkan database yang sesuai, sebagaimana diuraikan dalam persyaratan . Dalam tutorial ini, kami menyediakan kode SQL untuk database MySQL, dan kami juga berasumsi bahwa Anda memiliki klien yang cocok untuk mengeluarkan perintah database (mysql, MySQL Workbench, atau phpMyAdmin). <br>
 <br>
@@ -379,7 +379,7 @@ Satu-satunya hal yang perlu dilakukan adalah membuat tampilan terkait di app/Vie
 Arahkan browser Anda ke halaman “berita”, yaitu localhost:8080/news , Anda akan melihat daftar item berita, yang masing-masing memiliki link untuk menampilkan satu artikel saja. <br>
 ![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/3dbec9f5-aeb4-46d6-b5e7-1a0518dae92e)
 <br>
-**buat item berita**
+**BUAT ITEM BERITA**
 Anda sekarang tahu bagaimana Anda bisa membaca data dari database menggunakan CodeIgniter, tapi Anda belum menulis informasi apa pun ke database. Di bagian ini, Anda akan memperluas pengontrol berita dan model yang dibuat sebelumnya untuk menyertakan fungsi ini. 
 - aktifkan filter CSRF
 Buka file app/Config/Filters.php dan perbarui $methodsproperti seperti berikut:
@@ -555,6 +555,58 @@ data berhasil ditambahkan <br>
   ![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/714011af-3c5a-495e-91b7-15f1bf7a74ff)
 <br>
 tampilan http://localhost:8080/news dengan data yang berhasil di tambahkan. <br>
+
+![image](https://github.com/adheenw/AdheNurWulandari/assets/134478214/8d367ef1-3bf6-414b-8bf5-99c8c6382c71)  <br>
+**KESIMPULAN** <br>
+Melalui tutorial ini, pengguna dapat belajar cara membuat halaman, menghubungkan ke database, mengelola data, dan membuat tampilan yang menarik dengan menggunakan template dan pemisahan logika. <br>
+
+## 4. CodeIgniter4 Overview <br>
+1. Struktur Aplikasi <br>
+Untuk mendapatkan hasil maksimal dari CodeIgniter, Anda perlu memahami bagaimana struktur aplikasi, secara default, dan apa yang dapat Anda ubah untuk memenuhi kebutuhan aplikasi Anda.<br>
+=> Direktori Default <br>
+->aplikasi <br>
+->sistem <br>
+->publik <br>
+->dapat ditulis <br>
+->tes <br>
+=>Memodifikasi Lokasi Direktori <br>
+Jika Anda telah memindahkan salah satu direktori utama, Anda dapat mengubah pengaturan konfigurasi di dalam app/Config/Paths.php . <br>
+2. Model, Views, and Controllers
+3. Autoloading Files
+         a. Pemuat Otomatis Codelgniter4
+- Autoloading files <br>
+Konfigurasi awal dilakukan di app/Config/Autoload.php . File ini berisi dua array utama: satu untuk peta kelas, dan satu lagi untuk namespace yang kompatibel dengan PSR-4. <br>
+- ruang nama <br>
+Metode yang disarankan untuk mengatur kelas Anda adalah dengan membuat satu atau lebih namespace untuk file aplikasi Anda. Ini paling penting untuk semua kelas yang berhubungan dengan logika bisnis, kelas entitas, dll. Array $psr4dalam file konfigurasi memungkinkan Anda memetakan namespace ke direktori tempat kelas-kelas tersebut dapat ditemukan: <br>
+
+```
+<?php
+
+namespace Config;
+
+use CodeIgniter\Config\AutoloadConfig;
+
+class Autoload extends AutoloadConfig
+{
+    // ...
+    public $psr4 = [
+        APP_NAMESPACE => APPPATH, // For custom app namespace
+        'Config'      => APPPATH . 'Config',
+    ];
+
+    // ...
+}
+```
+
+- mengonfirmasi namespace <br>
+kita dapat memeriksa konfigurasi namespace dengan perintah: <br>
+
+```
+php spark namespaces
+```
+
+
+
 
 
 
